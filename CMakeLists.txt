@@ -19,9 +19,12 @@ else()
     set(MATH_LIB m)
 endif()
 
+set(IMAGE ../libIsoRender/build/libImage/image)
+set(ISO_RENDER ../libIsoRender/build/isoRender)
+
 include_directories(${PNG_INCLUDE_DIR} ../libIsoRender/src ../libImage/src)
-link_directories(../libIsoRender ../libImage)
+link_directories(../libIsoRender/build ../libImage)
 
 add_executable(TrackRender src/main.c src/track.c src/track_sections.c src/sprites.c)
 set_property(TARGET TrackRender PROPERTY C_STANDARD 99)
-target_link_libraries (TrackRender Image IsoRender ${PNG_LIBRARY} ${EMBREE} ${ASSIMP} ${JANSSON} ${MATH_LIB})
+target_link_libraries (TrackRender ${IMAGE} ${ISO_RENDER} ${PNG_LIBRARY} ${EMBREE} ${ASSIMP} ${JANSSON} ${MATH_LIB})

@@ -279,7 +279,7 @@ png_color rct2_palette[256]={
 {92,255,92}
 */
 
-int image_write_png(image_t* image,FILE* file)
+int image_write_png(image_t* image, FILE* file)
 {
 png_structp png_ptr=png_create_write_struct (PNG_LIBPNG_VER_STRING,NULL,NULL,NULL);
 	if(png_ptr==NULL)return 1;

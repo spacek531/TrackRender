@@ -5,6 +5,11 @@
 #include <math.h>
 #include "track.h"
 
+#ifndef fopen_s
+#define fopen_s fopen //multiplatform fail, thanks microsoft
+#define sprintf_s sprintf
+#endif
+
 context_t get_context(light_t* lights,uint32_t num_lights)
 {
 context_t context;
