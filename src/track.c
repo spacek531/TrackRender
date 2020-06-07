@@ -4,6 +4,7 @@
 #include <math.h>
 #include "track.h"
 #include "sprites.h"
+#include "mathhelp.h"
 
 const float track_base=12.375*0.0254;
 const float support_top=18*0.0254;

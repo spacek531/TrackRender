@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <math.h>
 #include "track.h"
+#include "mathhelp.h"
 #define NORM(x,y) (sqrt((x)*(x)+(y)*(y)))
 
 #define FLAT_LENGTH TILE_SIZE
